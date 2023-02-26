@@ -36,7 +36,7 @@ JSON.parse(localStorage.getItem ('contacts')) || [],);
     setContacts(contacts.filter(contact => contact.id !== idToDel));
   };
   useEffect(() => {
-    localStorage.setItem('contacts',contacts);
+    localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
   return (
     <Container>
