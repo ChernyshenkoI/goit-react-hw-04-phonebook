@@ -10,9 +10,7 @@ import { useEffect } from 'react';
 
 export const App = () => {
   const [contacts, setContacts] = useState(
-    localStorage.getItem('contacts') || []
-  );
-console.log(contacts)
+JSON.parse(localStorage.getItem ('contacts')) || [],);
 
   const [filter, setFilter] = useState('');
   const onSubmitAddToContacts = (name, number, form) => {

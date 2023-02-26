@@ -7,11 +7,8 @@ import { useEffect } from 'react';
 
 function Contacts ({nameList,onClick}){
   useEffect (()=>{
-    localStorage.setItem('contacts', nameList);
-
-
-    // localStorage.setItem('contacts', JSON.stringify(Contacts))
-  })
+    localStorage.setItem('contacts', JSON.stringify(nameList));
+  },[nameList])
 
 // class Contacts extends Component { 
 //   componentDidUpdate(prevProps, prevState) {
