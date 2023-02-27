@@ -38,6 +38,7 @@ JSON.parse(localStorage.getItem ('contacts')) || [],);
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
+
   return (
     <Container>
       <Title title="Phonebook" />
@@ -57,5 +58,5 @@ JSON.parse(localStorage.getItem ('contacts')) || [],);
 export default App;
 
 const Container = styled.div`
-  margin: 0 20px;
+  margin: 10 20px;
 `;
